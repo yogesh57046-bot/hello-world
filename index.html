@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Love Login</title>
+    <style>
+        body{
+            font-family:Arial,sans-serif;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+            background:linear-gradient(135deg,#ff758c,#ff7eb3);
+        }
+
+        .box{
+            background:white;
+            padding:30px;
+            border-radius:15px;
+            width:300px;
+            text-align:center;
+        }
+
+        input{
+            width:100%;
+            padding:10px;
+            margin:10px 0;
+        }
+
+        button{
+            width:100%;
+            padding:10px;
+            background:#ff4d6d;
+            color:white;
+            border:none;
+            cursor:pointer;
+        }
+
+        #msg{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h2>❤️ Login ❤️</h2>
+
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+
+    <button onclick="login()">Login</button>
+
+    <p id="msg"></p>
+</div>
+
+<script>
+function login(){
+
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+
+    if(username === "jamuna" &&
+       password === "yogeshjamuna2005"){
+
+        window.location.href="questions.html";
+
+    }else{
+        document.getElementById("msg").innerText =
+        "Wrong Username or Password";
+    }
+}
+</script>
+
+</body>
+</html>
+
+
